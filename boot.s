@@ -23,7 +23,7 @@ stack_top:
 .type _start @function
 
 _start:
-  mov $stach_top, %esp          /* point esp to the top of the stack */
+  mov $stack_top, %esp          /* point esp to the top of the stack */
   call kernel_main              /* enter the high level kernel */
 
   cli                           /* disable interrupts (clear interrupt enable in eflags). */
